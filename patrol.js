@@ -12,7 +12,13 @@
 	if (typeof module !== 'undefined' && module.exports) {
 		_ = require('underscore');
 		THREE = require('three');
-		ProgressBar = require('progress');
+		// ProgressBar = require('progress');
+
+		ProgressBar = function () {
+			return {
+				tick: function () {}
+			};
+		};
 	}
 	else {
 		_ = window._;
